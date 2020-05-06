@@ -1,26 +1,38 @@
-generic react app, comments under each line to clairify purpose. I know it makes it ugly sorry. 
+<!-- generic react app, comments under each line to clairify purpose. I know it makes it ugly sorry. Using my typical note taking form where the first blurb is from the tutorial/instructor/learning source and the second is in my own words -->
 
-<body>
-	<div id="root"></div>
-	<!-- where the application is mounted -->
+<!-- To create a UI in JS - you need a place where you append JS generated DOM elements, get access to that element from the document APIs, then create your own element, add some properties to it, and append it to the root element. -->
 
-	<script type="text/javascript">
+<!-- Leah speak/take away: we are making our elements into DOM nodes using JS inside the body with createelement, which we then append to a required root node (which needs to be accessed inside the script with getelementbyid) thats a div that begins the body which is basically the box the application lives in.  -->
+
+<!DOCTYPE html>
+<html>
+	<body>
+		<div id="root"></div>
+		<!-- where the application is mounted. root id used in this DOM node by convention so its easy to find and identify in JS -->
+
+		<script type="text/javascript">
 
 
-		const rootElement = document.getElementById('root')
-		// how we get access to the root div above, create variable and get the element by id we want
+			const rootElement = document.getElementById('root')
+			// how we get access to the root div above, create variable and get the element by id we want
+			// accessing the root node inside the script that we will mount all our new stuff to
 
-		const element = document.createElement('div')
-		// variable element that contains things we want appended to the root. can create elements with createElement then the type, this one is a div
+			const element = document.createElement('div')
+			// variable element that contains things we want appended to the root. can create elements with createElement then the type, this one is a div
+			// making a DOM element to go inside the now accessible root element
 
-		element.textContent = 'Hello World'
-		// adding text content to the element div
+			element.textContent = 'Hello World'
+			// adding text content to the element div
+			// putting some stuff in the div
 
-		element.className = 'container'
-		// because why not? idk he said just for fun. I assume its so we can use a class name for the element div elsewhere
+			element.className = 'container'
+			// because why not? idk he said just for fun. I assume its so we can use a class name for the element div elsewhere
+			// giving the div a class name because forsight
 
-		rootElement.appendChild(element)
-		// appending the element variable as the child of the root
+			rootElement.appendChild(element)
+			// appending the element variable as the child of the root
+			// tack the newly created div DOM element onto the main root one
 
-	</script>
-</body>
+		</script>
+	</body>
+</html>
