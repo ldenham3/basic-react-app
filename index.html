@@ -1,0 +1,26 @@
+generic react app, comments under each line to clairify purpose. I know it makes it ugly sorry. 
+
+<body>
+	<div id="root"></div>
+	<!-- where the application is mounted -->
+
+	<script type="text/javascript">
+
+
+		const rootElement = document.getElementById('root')
+		// how we get access to the root div above, create variable and get the element by id we want
+
+		const element = document.createElement('div')
+		// variable element that contains things we want appended to the root. can create elements with createElement then the type, this one is a div
+
+		element.textContent = 'Hello World'
+		// adding text content to the element div
+
+		element.className = 'container'
+		// because why not? idk he said just for fun. I assume its so we can use a class name for the element div elsewhere
+
+		rootElement.appendChild(element)
+		// appending the element variable as the child of the root
+
+	</script>
+</body>
